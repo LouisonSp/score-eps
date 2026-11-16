@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply font-body bg-slate-50 text-ink-800 antialiased;
+  min-height: 100dvh;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 10% -10%, rgba(22, 163, 74, 0.12), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(15, 23, 42, 0.06), transparent);
+}
+
+#app {
+  min-height: 100dvh;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+}
+
+.btn-primary {
+  @apply btn bg-court-700 text-white shadow-lg shadow-court-700/20 hover:bg-court-800;
+}
+
+.btn-secondary {
+  @apply btn bg-white text-ink-800 border border-slate-200 hover:bg-slate-50;
+}
+
+.btn-danger {
+  @apply btn bg-red-50 text-red-700 border border-red-100 hover:bg-red-100;
+}
+
+.card {
+  @apply rounded-2xl border border-slate-200/80 bg-white/90 shadow-sm backdrop-blur;
+}
+
+.input {
+  @apply w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-ink-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-court-500/40 focus:border-court-500;
+}
+
+.label {
+  @apply block text-xs font-semibold uppercase tracking-wide text-slate-500 mb-1.5;
+}
